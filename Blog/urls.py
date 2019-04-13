@@ -18,7 +18,6 @@ urlpatterns = [
     path('password-reset/done/',auth_views.PasswordResetDoneView.as_view(template_name='password_reset_done.html'), name='password_reset_done' ),
     path('password-reset-confirm/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(template_name='password_reset_confirm.html'), name='password_reset_confirm' ),
     path('', include('main.urls')), #used to speicfy the route for the blog url.
-    path('tinymce/', include('tinymce.urls'))
     ]
 
 if settings.DEBUG:
